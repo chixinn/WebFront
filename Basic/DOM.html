@@ -1,0 +1,51 @@
+<!-- 文档对象模型（Document Object Model，简称 DOM） 
+    定义了访问HTML和XML文档的标准。
+    DOM将HTML看作文档树，通过DOM提供的API对树节点操作。
+-->
+<!-- DOM可以操作HTML的内容 -->
+<!-- document.write()写html内容 -->
+<script>
+    document.write('<p>暴躁池欣宁在线骂人</p>')
+</script>
+<!-- 使用innerHTML属性改变HTML内容 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    <p id="p1">Hello World!</p>
+    <script>
+      document.getElementById('p1').innerHTML = 'Hello 实验楼';
+    </script>
+  </body>
+    <img id="image" src="https://www.baidu.com/img/bd_logo1.png" />
+    <script>
+      document.getElementById('image').src =
+        'https://static.shiyanlou.com/img/shiyanlou_logo.svg';
+    </script>
+    <p id ='syl' style ='color:red;'>实验楼</p>
+    <script>
+         document.getElementById('syl').style.color='green';
+    </script>
+    <input type ="text"/>
+    <input type ="text"/>
+    <script>
+        document.getElementsByTagName('input')[0].value='hello';
+        document.getElementsByTagName('input')[1].value='shiyanlou';
+    </script>
+
+
+</html>
+<!-- 根据 W3C 的 HTML DOM 标准，HTML 文档中的所有内容都是节点：整个文档就是一个文档节点，而每一个 HMTL 标签都是一个元素节点。HTML 标签中的文本则是文本节点，HTML 标签的属性是属性节点，一切都是节点。
+ -->
+<!-- 事件的定义
+在什么时候执行什么事。
+
+事件三要素
+事件由：事件源 + 事件类型 + 事件处理程序组成。
+
+事件源：触发事件的元素。
+事件类型：事件的触发方式（比如鼠标点击或键盘点击）。
+事件处理程序：事件触发后要执行的代码（函数形式，匿名函数）。 -->

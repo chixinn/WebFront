@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <title>内置对象array</title>
+    <script>
+        // arrayObject.sort(sortby);
+        // sortby 是可选的，规定排序顺序，必需是函数。如果没有参数的话，
+        // 将会按照字母顺序进行排序，更准确的说是按照字符编码（可自行百度了解）的顺序进行排序。
+        // 如果想按照其他标准进行排序，则需要提供比较函数
+        // 如这里将我们自己定义的sortNum1函数传参进去。
+
+        var arr1=["c","x","n","x","s","j"];
+        document.write(arr1+"<br />");
+        document.write(arr1.sort()+"<br />"+"<br />");
+        var arr2=[11,5,22,3,44,511,25,99,0,66];
+        document.write(arr2+"<br />");
+        document.write(arr2.sort()+"<br />"+"<br />");
+        function sortNum1(a,b){
+            return a-b;
+        }
+        function sortNum2(a,b){
+            return b-a;
+        }
+        var arr3=[1,22,44,6,55,5,2,4,66];
+        document.write(arr3+"<br />"+"<b>sort num1:</b>");
+        document.write(arr3.sort(sortNum1)+"<br />"+"<br />");
+        var arr4=[1,22,44,6,55,5,2,4,66];
+        document.write(arr4+"<br />");
+        document.write(arr4.sort(sortNum2)+"<br />"+"<br />");
+        
+
+    </script>
+
+</head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+      var student = {
+        name: 'zhangsan',
+        age: 18,
+        gender: 'male',
+      };
+      for (var key in student) {
+        console.log(key);
+        console.log(student[key]);
+      }
+    </script>
+  </body>
+</html>
